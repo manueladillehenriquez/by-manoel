@@ -46,11 +46,12 @@ export function ServicesSection() {
             Servicios
           </p>
           <h2 className="mt-3 font-instrument-serif text-3xl text-foreground sm:text-4xl">
-            Un solo pago para partir, una suscripción para mantenerte al día
+            Parte con todo resuelto. Después, no te preocupas de nada más.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Todo pensado para que tu negocio tenga presencia digital
-            profesional sin complicarte con lo técnico.
+            Nada de plantillas genéricas ni letra chica: pagas una vez para
+            lanzarte, y una suscripción simple para que tu web nunca quede
+            abandonada.
           </p>
         </div>
 
@@ -61,7 +62,7 @@ export function ServicesSection() {
 
         <div className="mt-10 text-center">
           <a
-            href={waLink("Hola By Manoel, quiero cotizar el Paquete Inicial + suscripción mensual.")}
+            href={waLink("Hola By Manoel, quiero cotizar el Kit de Lanzamiento + Plan de Mantención.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-[var(--whatsapp-dark)]"

@@ -6,6 +6,7 @@ import { FaqSection } from "@/components/sections/faq-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsappFab } from "@/components/whatsapp-fab";
+import { SiteSignature } from "@/components/site-signature";
 import { siteConfig, waLink } from "@/lib/site-config";
 
 export default function Home() {
@@ -13,6 +14,13 @@ export default function Home() {
     <main>
       <ResponsiveHeroBanner
         ctaButtonHref={waLink()}
+        badgeLabel={siteConfig.hero.badgeLabel}
+        badgeText={siteConfig.hero.badgeText}
+        title={siteConfig.hero.title}
+        titleLine2={siteConfig.hero.titleLine2}
+        description={siteConfig.hero.description}
+        primaryButtonText={siteConfig.hero.primaryButtonText}
+        partnersTitle={siteConfig.hero.partnersTitle}
         partners={siteConfig.clients.map((c) => ({
           name: c.name,
           logoUrl: c.logo,
@@ -26,6 +34,7 @@ export default function Home() {
       <ContactSection />
       <SiteFooter />
       <WhatsappFab />
+      <SiteSignature />
     </main>
   );
 }

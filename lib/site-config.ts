@@ -8,7 +8,7 @@
  * ------------------------------------------------------------------
  */
 
-const DOMAIN_TRANSFER_PRICE = "$21.990";
+const DOMAIN_TRANSFER_PRICE = "$19.990";
 
 // Cuando el sitio se publica en GitHub Pages como repo de proyecto
 // (https://usuario.github.io/by-manoel/), las imágenes de /public
@@ -23,13 +23,26 @@ export const siteConfig = {
   businessName: "By Manoel",
   tagline: "Administración web y digital",
   description:
-    "Diseño y administración de páginas web, tarjetas QR y NFC para reseñas en Google, y soporte mensual para pequeños negocios.",
+    "Diseño de páginas web y SEO local para pymes en Santiago. Tarjetas QR y NFC para reseñas en Google, con administración mensual a cargo de una persona real.",
+
+  // Contenido del hero: se pasa como props a ResponsiveHeroBanner desde
+  // app/page.tsx, para que todo el mensaje del sitio viva en un solo lugar.
+  hero: {
+    badgeLabel: "Nuevo",
+    badgeText: "Tu web lista en 7 días",
+    title: "Que te encuentren en Google,",
+    titleLine2: "antes que tu competencia.",
+    description:
+      "Diseñamos tu página, activamos tu SEO local para que aparezcas primero cuando te buscan cerca, y te damos QR y NFC para juntar reseñas de 5 estrellas. Nosotros la administramos cada mes — tú solo atiendes tu negocio.",
+    primaryButtonText: "Quiero mi página web",
+    partnersTitle: "Pymes que ya aparecen mejor en Google gracias a nosotros",
+  },
 
   // WhatsApp (sin +, sin espacios, con código de país)
   whatsappNumber: "56979914514",
   whatsappNumberDisplay: "+56 9 7991 4514",
   whatsappDefaultMessage:
-    "Hola By Manoel, quiero saber más sobre el Paquete Inicial y la suscripción mensual.",
+    "Hola By Manoel, quiero saber más sobre el Kit de Lanzamiento y el Plan de Mantención.",
 
   address: {
     street: "José Miguel Infante 1415",
@@ -45,9 +58,9 @@ export const siteConfig = {
 
   pricing: {
     launch: {
-      name: "Paquete Inicial",
-      price: "$99.000",
-      note: "pago único",
+      name: "Kit de Lanzamiento",
+      price: "$69.990",
+      note: "pago único · IVA incluido",
       items: [
         "Diseño y desarrollo de tu página web",
         "Activación y optimización SEO local en Google",
@@ -58,9 +71,9 @@ export const siteConfig = {
       ],
     },
     monthly: {
-      name: "Suscripción Mensual",
+      name: "Plan de Mantención",
       price: "$9.990",
-      note: "/ mes",
+      note: "/ mes · IVA incluido",
       items: [
         "Administración continua de tu sitio",
         "Actualizaciones de contenido ilimitadas",
@@ -87,24 +100,36 @@ export const siteConfig = {
   faq: [
     {
       question: "¿Qué pasa si cancelo la suscripción?",
-      answer: "Solo se dará de baja la página, nada más.",
+      answer:
+        "Se da de baja tu página, sin costo ni letra chica. Vuelves cuando quieras.",
     },
     {
       question: "¿Cuántas actualizaciones de contenido incluye el mes?",
-      answer: "Ilimitadas.",
+      answer:
+        "Ilimitadas: cambias precios, fotos, textos o promociones las veces que necesites.",
     },
     {
       question: "¿Cuánto demora la entrega?",
-      answer: "1 semana desde que se concreta la reunión.",
+      answer: "Una semana desde que definimos los detalles en la reunión inicial.",
     },
     {
       question: "¿El dominio queda a mi nombre?",
-      answer: `No, queda a nuestro nombre; sin embargo, es transferible por ${DOMAIN_TRANSFER_PRICE}.`,
+      answer: `Por defecto no, para poder administrarlo sin trabas mientras estás en la suscripción. Si en algún momento lo quieres 100% a tu nombre, es una opción disponible por ${DOMAIN_TRANSFER_PRICE}.`,
     },
     {
       question: "¿Hay planes más grandes o más chicos?",
       answer:
-        "De momento existe un único Paquete Inicial y un único Plan mensual.",
+        "Por ahora manejamos un solo Kit de Lanzamiento y un solo Plan de Mantención, simple a propósito. Si tu negocio necesita algo más específico, escríbenos y lo vemos juntos.",
+    },
+    {
+      question: "¿Por qué no lo hago yo mismo en Wix o Canva?",
+      answer:
+        "Puedes, pero te va a tomar tiempo que no tienes, y sin SEO técnico igual no te va a encontrar nadie en Google. Nosotros lo hacemos y lo mantenemos al día — tú te dedicas a tu negocio.",
+    },
+    {
+      question: "¿Con quién voy a hablar?",
+      answer:
+        "Conmigo, Manuel. No hay call center ni ticket de soporte: me escribes por WhatsApp y te respondo yo, el mismo día.",
     },
   ],
 } as const;

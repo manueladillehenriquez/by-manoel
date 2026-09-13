@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, waLink } from "@/lib/site-config";
 
 export function ClientsSection() {
   return (
@@ -10,7 +10,7 @@ export function ClientsSection() {
             Nuestro trabajo
           </p>
           <h2 className="mt-3 font-instrument-serif text-3xl text-foreground sm:text-4xl">
-            Páginas que administramos
+            Negocios que ya trabajan con nosotros
           </h2>
           <p className="mt-4 text-muted-foreground">
             Negocios reales que ya confían en {siteConfig.businessName} para
@@ -45,14 +45,19 @@ export function ClientsSection() {
             </a>
           ))}
 
-          {/* Cupo para el próximo cliente */}
-          <div className="flex flex-col items-center gap-3 rounded-2xl p-4 text-muted-foreground">
-            <span className="flex h-28 w-28 items-center justify-center rounded-full border-2 border-dashed border-border text-3xl">
+          {/* Cupo para el próximo cliente: clicable, invita a ser el próximo logo */}
+          <a
+            href={waLink("Hola By Manoel, quiero que mi negocio sea el próximo en la web.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex flex-col items-center gap-3 rounded-2xl p-4 text-muted-foreground transition-colors hover:bg-card hover:text-foreground"
+          >
+            <span className="flex h-28 w-28 items-center justify-center rounded-full border-2 border-dashed border-border text-3xl transition-colors group-hover:border-accent group-hover:text-accent">
               +
             </span>
             <span className="text-sm font-medium">Tu negocio</span>
-            <span className="text-xs">próximamente</span>
-          </div>
+            <span className="text-xs">¿el próximo eres tú?</span>
+          </a>
         </div>
       </div>
     </section>

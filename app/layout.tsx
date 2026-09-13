@@ -30,7 +30,7 @@ const siteUrl = "https://manueladillehenriquez.github.io/by-manoel";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${siteConfig.businessName} — Administración web y digital para tu negocio`,
+    default: `${siteConfig.businessName} — Diseño web y SEO local para pymes en Santiago`,
     template: `%s · ${siteConfig.businessName}`,
   },
   description: siteConfig.description,
@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     "código QR",
     "SEO local Chile",
     "páginas web para pymes",
+    "diseño web para pymes Santiago",
+    "administración mensual de sitio web",
     "Providencia Santiago",
   ],
   authors: [{ name: siteConfig.businessName }],
@@ -49,13 +51,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_CL",
     url: siteUrl,
-    title: `${siteConfig.businessName} — Administración web y digital`,
+    title: `${siteConfig.businessName} — Diseño web y SEO local para pymes`,
     description: siteConfig.description,
     siteName: siteConfig.businessName,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.businessName} — Administración web y digital`,
+    title: `${siteConfig.businessName} — Diseño web y SEO local para pymes`,
     description: siteConfig.description,
   },
 };

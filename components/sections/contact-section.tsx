@@ -37,8 +37,8 @@ export function ContactSection() {
               Escríbenos directo por WhatsApp
             </h3>
             <p className="mt-3 max-w-md text-sm text-muted-foreground">
-              Resolvemos tus dudas, te ayudamos a elegir el plan ideal y
-              agendamos tu reunión en minutos.
+              Te respondo yo mismo, el mismo día: resolvemos tus dudas,
+              elegimos el plan ideal y agendamos tu reunión.
             </p>
             <a
               href={waLink()}
