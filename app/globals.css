@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ------------------------------------------------------------------
+   Tema "By Manoel" — oscuro y moderno.
+   Todos los colores/tipografías viven en estas variables: cambia
+   acá para ajustar la identidad visual de todo el sitio.
+   ------------------------------------------------------------------ */
+@theme inline {
+  /* Las fuentes se auto-hospedan vía next/font (ver app/layout.tsx),
+     que expone estas variables --inter-font / --instrument-serif-font
+     / --alex-brush-font en <html>. Acá solo las mapeamos a nombres
+     de utilidad de Tailwind. */
+  --font-sans: var(--inter-font), system-ui, sans-serif;
+  --font-serif: var(--instrument-serif-font), Georgia, serif;
+  /* El componente de hero usa la utilidad `font-instrument-serif`
+     (en vez de `font-serif`), así que exponemos también ese nombre
+     para que Tailwind genere la clase que realmente se usa. */
+  --font-instrument-serif: var(--instrument-serif-font), Georgia, serif;
+  --font-signature: var(--alex-brush-font), cursive;
+
+  --color-background: var(--bg-0);
+  --color-foreground: var(--text-100);
+  --color-card: var(--bg-100);
+  --color-card-foreground: var(--text-100);
+  --color-muted: var(--bg-100);
+  --color-muted-foreground: var(--text-300);
+  --color-border: var(--bg-300);
+  --color-accent: var(--whatsapp);
+  --color-accent-foreground: #ffffff;
+}
+
+:root {
+  --bg-0: #09090b;
+  --bg-100: #18181b;
+  --bg-200: #27272a;
+  --bg-300: #3f3f46;
+  --text-100: #fafafa;
+  --text-200: #e4e4e7;
+  --text-300: #a1a1aa;
+  --text-400: #71717a;
+  --whatsapp: #25d366;
+  --whatsapp-dark: #1da851;
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------------------------------------------------
+   Animaciones usadas por ResponsiveHeroBanner
+   (clases animate-fade-slide-in-1..4, escalonadas)
+   ------------------------------------------------------------------ */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-in-1 {
+  animation: fadeSlideIn 0.6s ease-out both;
+}
+.animate-fade-slide-in-2 {
+  animation: fadeSlideIn 0.6s ease-out 0.1s both;
+}
+.animate-fade-slide-in-3 {
+  animation: fadeSlideIn 0.6s ease-out 0.2s both;
+}
+.animate-fade-slide-in-4 {
+  animation: fadeSlideIn 0.6s ease-out 0.3s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-slide-in-1,
+  .animate-fade-slide-in-2,
+  .animate-fade-slide-in-3,
+  .animate-fade-slide-in-4 {
+    animation: none;
+  }
+}
