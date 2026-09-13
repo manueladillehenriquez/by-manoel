@@ -35,6 +35,11 @@ jobs:
 
       - name: Build (export estático)
         run: npm run build
+        env:
+          # Prefijo que necesitan las imágenes de /public para cargar
+          # bien bajo /by-manoel/ (ver lib/site-config.ts). Si más
+          # adelante conectas un dominio propio, borra esta línea.
+          NEXT_PUBLIC_BASE_PATH: /by-manoel
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
